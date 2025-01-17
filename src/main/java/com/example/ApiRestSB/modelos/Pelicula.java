@@ -11,17 +11,17 @@ public class Pelicula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
     private String director;
-    private String descripcion;
     private String genero;
 
-    public Pelicula(String titulo, String director, String descripcion, String genero) {
-        this.id = id;
+    public Pelicula(){
+
+    }
+
+    public Pelicula(String titulo, String director, String genero) {
         this.titulo = titulo;
         this.director = director;
-        this.descripcion = descripcion;
         this.genero = genero;
     }
 
@@ -47,14 +47,6 @@ public class Pelicula {
 
     public void setDirector(String director) {
         this.director = director;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
     }
 
     public String getGenero() {
